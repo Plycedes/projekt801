@@ -25,19 +25,26 @@ fn main() {
             }
             println!("------------");
         }
-        else if input.trim() == "exit" {
-            exec = false;
-        }
-        else if input.trim() == "sum"{
-            sum::sum();
-        }
-        else if input.trim() == "user"{
-            user::name();
-        }
+        // else if input.trim() == "exit" {
+        //     exec = false;
+        // }
+        // else if input.trim() == "sum"{
+        //     sum::sum();
+        // }
+        // else if input.trim() == "user"{
+        //     user::name();
+        // }
+        // else {
+        //     println!("Enter a valid input!!");
+        // }
         else {
-            println!("Enter a valid input!!");
+            match input.trim() {
+                "exit" => exec = false,
+                "sum" => sum::sum(),
+                "user" => user::name(),
+                _ => println!("Enter a valid input"),
+            }
         }
-
     }    
     println!("Terminated");
 }   

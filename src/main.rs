@@ -1,9 +1,10 @@
 mod user;
 mod sum;
+mod cords;
 use std::io;
 
 fn main() {
-    let f: [&str; 2] = ["sum", "user"];
+    let f: [&str; 3] = ["sum", "user", "cords"];
 
     println!("Enter the name of the operation you want to perform!");
     println!("Enter ls to list all the operations!");
@@ -30,6 +31,7 @@ fn main() {
                 "exit" => exec = false,
                 "sum" => sum::sum(),
                 "user" => user::name(),
+                "cords" => cords::cords(),
                 _ => println!("Enter a valid input"),
             }
         }

@@ -1,10 +1,11 @@
 mod user;
 mod sum;
 mod cords;
+mod temperature;
 use std::io;
 
 fn main() {
-    let f: [&str; 3] = ["sum", "user", "cords"];
+    let f: [&str; 4] = ["sum", "user", "cords", "temperature"];
 
     println!("Enter the name of the operation you want to perform!");
     println!("Enter ls to list all the operations!");
@@ -32,6 +33,7 @@ fn main() {
                 "sum" => sum::sum(),
                 "user" => user::name(),
                 "cords" => cords::cords(),
+                "temperature" => temperature::temperature(),
                 _ => println!("Enter a valid input"),
             }
         }

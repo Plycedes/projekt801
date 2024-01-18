@@ -1,3 +1,4 @@
+///Prints coordinates
 pub fn cords(){
 	let (x, y) = get_cords();
 	println!("{}, {}",x,y);
@@ -12,6 +13,7 @@ pub fn cords(){
 		println!("Equal");
 	}
 }
+///Returns coordinates
 fn get_cords() -> (i32, i32){
 	return (-52, 48);	
 }

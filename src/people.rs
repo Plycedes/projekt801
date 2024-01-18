@@ -1,10 +1,13 @@
+///Structure of person data
 struct Person {
 	name: String,
 	age: u8,
 	fav_color: String,
 }
 
+///Function for people
 pub fn people() {
+	///Stores data of people
 	let people = vec![
 		Person {
 			name: "Luffy".to_owned(),
@@ -23,6 +26,7 @@ pub fn people() {
 		},
 	];
 
+	///Prints the data of each person
 	for person in people {
 		if person.age <= 21 {
 			println!("Name: {}", person.name);

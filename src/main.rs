@@ -1,12 +1,14 @@
-mod user;
 mod sum;
+mod user;
 mod cords;
+mod people;
 mod vectors;
 mod temperature;
+
 use std::io;
 
 fn main() {
-    let f: [&str; 5] = ["sum", "user", "cords", "vectors", "temperature"];
+    let f = vec!["sum", "user", "cords", "vectors", "people", "temperature"];
 
     println!("Enter the name of the operation you want to perform!");
     println!("Enter ls to list all the operations!");
@@ -34,6 +36,7 @@ fn main() {
                 "sum" => sum::sum(),
                 "user" => user::name(),
                 "cords" => cords::cords(),
+                "people" => people::people(),
                 "vectors" => vectors::vectors(),
                 "temperature" => temperature::temperature(),
                 _ => println!("Enter a valid input"),

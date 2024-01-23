@@ -1,12 +1,9 @@
-///Locker structure
 struct Locker {
 	name: String,
 	id: Option<u32>,
 }
 
-///Function for lockers
-pub fn lockers() {
-	///Stores all the locker data
+pub fn lockers() {	
 	let lockers = vec![
 		Locker {
 			name: "Erwin".to_owned(),
@@ -17,8 +14,7 @@ pub fn lockers() {
 			id: None,
 		}
 	];
-
-	///Displays locker data
+	
 	for locker in lockers {
 		println!("Name: {}", locker.name);
 		match locker.id {

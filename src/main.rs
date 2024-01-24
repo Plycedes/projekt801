@@ -1,4 +1,5 @@
 mod sum;
+mod file;
 mod user;
 mod area;
 mod cords;
@@ -13,6 +14,7 @@ use std::io;
 fn main() {    
     let f = vec![   
                     "sum",
+                    "file",
                     "user",
                     "guess",
                     "cords",
@@ -49,6 +51,7 @@ fn main() {
             match input.trim() {
                 "exit" => exec = false,
                 "sum" => sum::sum(),
+                "file" => file::file(),
                 "user" => user::name(),
                 "area" => area::area(),
                 "cords" => cords::cords(),

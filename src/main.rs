@@ -1,5 +1,6 @@
 mod sum;
 mod user;
+mod area;
 mod cords;
 mod guess;
 mod people;
@@ -10,7 +11,17 @@ mod temperature;
 use std::io;
 
 fn main() {    
-    let f = vec!["sum", "user","guess",  "cords", "lockers", "vectors", "people", "temperature"];
+    let f = vec![   
+                    "sum",
+                    "user",
+                    "guess",
+                    "cords",
+                    "area",
+                    "lockers",
+                    "vectors",
+                    "people",
+                    "temperature"
+                ];
 
     println!("Enter the name of the operation you want to perform!");
     println!("Enter ls to list all the operations!");
@@ -39,6 +50,7 @@ fn main() {
                 "exit" => exec = false,
                 "sum" => sum::sum(),
                 "user" => user::name(),
+                "area" => area::area(),
                 "cords" => cords::cords(),
                 "guess" => guess::guessing_game(),
                 "people" => people::people(),

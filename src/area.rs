@@ -5,8 +5,19 @@ struct Rectangle{
 	height: u32,
 }
 
+impl Rectangle{
+	fn area(&self) -> u32 {
+		self.width * self.height
+	}
+
+	fn can_hold(&self, other: &Rectangle) -> bool {
+		self.width > other.width && self.height > other.height
+	}
+}
+
 pub fn area(){
 	let mut rect = Rectangle {width: 0, height: 0};
+	let def = Rectangle {width: 6, height: 9};
 
 	println!("Enter the dimensions of the rectangle");
 
@@ -29,7 +40,7 @@ pub fn area(){
 	loop {
 		input = String::new();
 		io::stdin().read_line(&mut input).expect("Error occured");
-		
+
 		rect.height = match input.trim().parse(){
 			Ok(num) => num,
 			Err(_) => {
@@ -40,9 +51,6 @@ pub fn area(){
 		break;
 	};
 
-	println!("Area: {}", res(&rect));
-}
-
-fn res(rectangle: &Rectangle) -> u32 {
-		rectangle.width * rectangle.height
+	println!("Area: {}", rect.area());
+	println!("Given rectangle can hold default rectangle: {}", rect.can_hold(&def));
 }

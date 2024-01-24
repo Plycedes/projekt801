@@ -23,10 +23,11 @@ fn main() {
                     "temperature"
                 ];
 
+    println!("====================================================");
     println!("Enter the name of the operation you want to perform!");
     println!("Enter ls to list all the operations!");
     println!("Enter exit to terminate the program");
-
+    println!("====================================================");
     
     let mut exec = true;
 
@@ -36,14 +37,13 @@ fn main() {
         io::stdin().read_line(&mut input).expect("Error");
         
         if input.trim() == "ls" {
-            println!("------------");
+            println!("====================================================");
             println!("OPERATIONS:");
             let mut i = 0;
-            while i != 2{
+            while i != f.len() {
                 println!("{}",f[i]);
                 i += 1;
-            }
-            println!("------------");
+            }            
         }        
         else {            
             match input.trim() {
@@ -60,6 +60,7 @@ fn main() {
                 _ => println!("Enter a valid input"),
             }
         }
+        println!("====================================================");
     }    
     println!("Terminated");
 }   

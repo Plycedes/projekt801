@@ -7,6 +7,7 @@ mod guess;
 mod people;
 mod lockers;
 mod vectors;
+mod generics;
 mod temperature;
 
 use std::io;
@@ -16,12 +17,13 @@ fn main() {
                     "sum",
                     "file",
                     "user",
-                    "guess",
-                    "cords",
                     "area",
+                    "guess",
+                    "cords",                    
+                    "people",
                     "lockers",
                     "vectors",
-                    "people",
+                    "generics",                    
                     "temperature"
                 ];
 
@@ -59,6 +61,7 @@ fn main() {
                 "people" => people::people(),
                 "lockers" => lockers::lockers(),
                 "vectors" => vectors::vectors(),
+                "generics" => generics::generics(),
                 "temperature" => temperature::temperature(),
                 _ => println!("Enter a valid input"),
             }

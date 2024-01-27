@@ -4,6 +4,7 @@ mod user;
 mod area;
 mod cords;
 mod guess;
+mod traits;
 mod people;
 mod lockers;
 mod vectors;
@@ -19,7 +20,8 @@ fn main() {
                     "user",
                     "area",
                     "guess",
-                    "cords",                    
+                    "cords",
+                    "traits",                    
                     "people",
                     "lockers",
                     "vectors",
@@ -58,6 +60,7 @@ fn main() {
                 "area" => area::area(),
                 "cords" => cords::cords(),
                 "guess" => guess::guessing_game(),
+                "traits" => traits::traits(),
                 "people" => people::people(),
                 "lockers" => lockers::lockers(),
                 "vectors" => vectors::vectors(),

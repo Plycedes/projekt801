@@ -6,6 +6,7 @@ mod cords;
 mod guess;
 mod traits;
 mod people;
+mod longer;
 mod lockers;
 mod vectors;
 mod generics;
@@ -23,6 +24,7 @@ fn main() {
                     "cords",
                     "traits",                    
                     "people",
+                    "longer",
                     "lockers",
                     "vectors",
                     "generics",                    
@@ -62,6 +64,7 @@ fn main() {
                 "guess" => guess::guessing_game(),
                 "traits" => traits::traits(),
                 "people" => people::people(),
+                "longer" => longer::longer(),
                 "lockers" => lockers::lockers(),
                 "vectors" => vectors::vectors(),
                 "generics" => generics::generics(),
